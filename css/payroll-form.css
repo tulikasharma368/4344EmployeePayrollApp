@@ -129,6 +129,10 @@ select{
     background-color: transparent;
 }
 
+.slider{
+    width: 100%;
+}
+
 /* UC 6 */
 .buttonParent {
     display: flex;
@@ -165,4 +169,11 @@ select{
     /* margin-left: 140px; */
     text-decoration: none;
     text-align: center;
+}
+
+.text-error{
+    margin-left: 10xp;
+    font-size: 12px;
+    font-style: italic;
+    color: red;
 }

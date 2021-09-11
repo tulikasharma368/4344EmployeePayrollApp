@@ -21,13 +21,14 @@
   </header>
   <!-- UC2 -->
   <div class="form-content">
-    <form class="form" action="#" onsubmit="save();return false">
+    <form class="form" action="#" onreset="resetForm()" onsubmit="save()">
       <div class="form-head">
         employee payroll form
       </div>
       <div class="row-content">
         <label class="label text" for="name">Name</label>
         <input class="input" type="text" name="name" id="name" placeholder="Your name..." required>
+        <error-output class="text-error" for="text"></error-output>
       </div>
 
       <div class="row-content">
@@ -68,21 +69,21 @@
     <div class="row-content">
         <label class="label text" for="department">Department</label>
         <div>
-            <input class="checkbox" type="checkbox" id="hr" name="hr" value="HR">
+            <input class="checkbox" type="checkbox" id="hr" name="department" value="HR">
             <label class="text" for="hr">HR</label>
-            <input class="checkbox" type="checkbox" id="sales" name="sales" value="Sales">
+            <input class="checkbox" type="checkbox" id="sales" name="department" value="Sales">
             <label class="text" for="sales">Sales</label>
-            <input class="checkbox" type="checkbox" id="finance" name="finance" value="finance">
+            <input class="checkbox" type="checkbox" id="finance" name="department" value="finance">
             <label class="text" for="finance">Finance</label>
-            <input class="checkbox" type="checkbox" id="engineer" name="engineer" value="Engineer">
+            <input class="checkbox" type="checkbox" id="department" name="department" value="Engineer">
             <label class="text" for="engineer">Engineer</label>
-            <input class="checkbox" type="checkbox" id="others" name="others" value="Others">
+            <input class="checkbox" type="checkbox" id="others" name="department" value="Others">
             <label class="text" for="others">Others</label>
         </div>
       </div>
       <div class="row-content">
         <label class="label text" for="salary">Choose your salary: </label>
-        <input class="input" type="range" name="salary" id="salary" min="300000" max="500000" 
+        <input class="slider" type="range" name="salary" id="salary" min="300000" max="500000" 
             step="100" value="400000">
         <output class="salary-output text" for="salary">400000</output>
       </div>
@@ -158,7 +159,7 @@
         <!-- UC6 -->
         <div class="row-content">
           <label class="label text" for="notes">Notes</label>
-          <textarea name="Notes" class="input" id="Notes" placeholder="" style="height: 100px;"></textarea>
+          <textarea name="notes" class="input" id="notes" placeholder="" style="height: 100px;"></textarea>
         </div>
         <div class="buttonParent">
           <a href="/home.html" class="resetButton button cancelButton">Cancel</a>
@@ -171,5 +172,8 @@
   </div>
 
   <script src="/js/payroll-form.js"></script>
+  <script src="/js/employeePayroll.js"></script>
+  
+  
 </body>
 </html>
